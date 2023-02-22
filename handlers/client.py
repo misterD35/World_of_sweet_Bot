@@ -44,13 +44,6 @@ async def read_db_menu(message: types.Message):
 async def delete_from_db(message: types.Message):
     await sqlite_db.sql_delete_position(message)
 
-# @dp.message_handler()
-# async def echo_send(message: types.Message):
-#     if message.text.lower() == 'привет':
-#         await message.answer('И тебе привет, друг')
-    # await message.reply(message.text)
-    # await bot.send_message(message.from_user.id, message.text)
-
 
 def register_handlers_client(dp: Dispatcher):
     dp.register_message_handler(command_start, commands=['start', 'help'])
